@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset ="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Image Slider in HTML/CSS</title>
+</head>
+<body>
+  <!-- Image Slider Start -->
+  <div class="slider">
+    <div class="slides">
+      <!-- Radio Button Start  -->
+      <input type="radio" name="radio-btn" id="radio1">
+      <input type="radio" name="radio-btn" id="radio2">
+      <input type="radio" name="radio-btn" id="radio3">
+      <input type="radio" name="radio-btn" id="radio4">
+      <!-- Radio Button Close  -->
+
+      <!-- Slide Image Start -->
+      <div class="slide first">
+        <img src="31.png" alt="">
+      </div>
+      <div class="slide">
+        <img src="2.jpg" alt="">
+      </div>
+      <div class="slide">
+        <img src="28.jpg" alt="">
+      </div>
+      <div class="slide">
+        <img src="42.jpg" alt="">
+      </div>
+      <!-- Slide Image Close -->
+
+      <!-- Automatic Navigation Start -->
+      <div class="navigation-auto">
+        <div class="auto-btn-1"></div>
+        <div class="auto-btn-2"></div>
+        <div class="auto-btn-3"></div>
+        <div class="auto-btn-4"></div>
+      </div>
+      <!-- Automatic Navigation Close -->
+    </div>
+	
+      <!-- Manual Navigation Start -->
+      <div class="navigation-manual">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+        <label for="radio4" class="manual-btn"></label>
+      </div>
+      <!-- Manual Navigation Close -->
+  </div>
+  <!-- Image Slider Close -->
+  <script>
+    var n = 1;
+
+    function autoSlide(n) {
+    console.log(n);
+    document.getElementById("radio" + n).checked = true;
+    if (n < 4) {
+        setTimeout(function() {
+        autoSlide(n + 1)
+        }, 20000);
+    }
+    else if (n >= 4) {
+        setTimeout(function() {
+        autoSlide(n = 1)
+        }, 20000);
+    }
+    }
+
+    window.onload = function() {
+    autoSlide(n)
+    };
+  </script>
+</body>
+</html>
