@@ -8,12 +8,6 @@
 -->
 
 <!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/Dominic-Morgan/suzannes_gallery/README">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
-
   <h3 align="center">Suzannes Gallery</h3>
 
   <p align="center">
