@@ -41,6 +41,11 @@
   </ol>
 </details>
 
+<!-- ABOUT THE PROJECT -->
+The first of my repos and website development, for Suzanne Morgans artwork. 
+Please visit link www.suzannesgallery.co.uk to see the work in actions.
+Thank you!
+
 
 <!-- CONTRIBUTING -->
 ## Contributing
