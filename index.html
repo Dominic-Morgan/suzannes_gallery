@@ -4,10 +4,15 @@
   <meta charset ="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Image Slider in HTML/CSS</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+  <title>Suzannes Gallery</title>
 </head>
 <body>
+<!-- Home page -->
   <!-- Image Slider Start -->
   <div class="slider">
     <div class="slides">
@@ -17,22 +22,20 @@
       <input type="radio" name="radio-btn" id="radio3">
       <input type="radio" name="radio-btn" id="radio4">
       <!-- Radio Button Close  -->
-
       <!-- Slide Image Start -->
       <div class="slide first">
-        <img src="31.png" alt="">
+        <img src="images/42.jpg" alt="painting 1">
       </div>
       <div class="slide">
-        <img src="2.jpg" alt="">
+        <img src="images/2.jpg" alt="painting 2">
       </div>
       <div class="slide">
-        <img src="28.jpg" alt="">
+        <img src="images/28.jpg" alt="painting 3">
       </div>
       <div class="slide">
-        <img src="42.jpg" alt="">
+        <img src="images/31.png" alt="painting 4">
       </div>
       <!-- Slide Image Close -->
-
       <!-- Automatic Navigation Start -->
       <div class="navigation-auto">
         <div class="auto-btn-1"></div>
@@ -42,7 +45,6 @@
       </div>
       <!-- Automatic Navigation Close -->
     </div>
-	
       <!-- Manual Navigation Start -->
       <div class="navigation-manual">
         <label for="radio1" class="manual-btn"></label>
@@ -52,28 +54,33 @@
       </div>
       <!-- Manual Navigation Close -->
   </div>
-  <!-- Image Slider Close -->
-  <script>
-    var n = 1;
+  <!-- Home page text -->
+  <header class="title">
+    <h3 id="pre-title">Art By</h3>
+    <h1 id="title">SUZANNE MORGAN</h1>
+  </header>
+  <!-- Burger and Words -->
+  <section class="home">
+    <div class="open-overlay">
+      <span class="bar-top"></span>
+      <span class="bar-middle"></span>
+      <span class="bar-bottom"></span>
+    </div>
+  </section>
+  <!-- Overlay Start -->
+  <Section class="overlay-navigation">
+      <nav role="navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="html/gallery.html">Gallery</a></li>
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+  </section>
+  <script src="js/script.js"></script>
+  <!-- Overlay End -->
 
-    function autoSlide(n) {
-    console.log(n);
-    document.getElementById("radio" + n).checked = true;
-    if (n < 4) {
-        setTimeout(function() {
-        autoSlide(n + 1)
-        }, 20000);
-    }
-    else if (n >= 4) {
-        setTimeout(function() {
-        autoSlide(n = 1)
-        }, 20000);
-    }
-    }
-
-    window.onload = function() {
-    autoSlide(n)
-    };
-  </script>
 </body>
 </html>
